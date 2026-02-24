@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+:root{
+    --c01: #C2B280;
+    --c02: #fff;
+    --c03: #157347;
+    --c04: #FBFF00;
+    --c05: #FF0000;
+    --c06: #000;
+    --c07: #8D6E63;
+}
+
+.cabecalho{
+    background-color: var(--c01);
+}
+
+.texto{
+    color: var(--c02);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13%;
+}
+
+.add{
+    background-color: var(--c07);
+    border: none;
+    padding: 5px 190px;
+    margin-top: 10px;
+    color: var(--c02);
+}
+
+.add:hover{
+    background-color: var(--c01);
+    color: var(--c02);
+}
+
+.titulo{
+    color: var(--c01);
+}

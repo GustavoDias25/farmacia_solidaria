@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+:root{
+    --c01: #C2B280;
+    --c02: #fff;
+    --c03: #157347;
+    --c04: #FBFF00;
+    --c05: #FF0000;
+    --c06: #000;
+    --c07: #8D6E63;
+}
+
+h2{
+    color: var(--c01);
+}
+
+tr,td,th{
+    text-align: center;
+}
+
+.validade{
+    width: 30%;
+}
+
+.actions>.detalhar{
+    flex-direction: row;
+    background-color: var(--c03);
+    color: var(--c02);
+    padding: 3px 10px;
+}
+
+.actions>.editar{
+    flex-direction: row;
+    background-color: var(--c04);
+    color: var(--c06);
+    padding: 3px 10px;
+    border: none;
+}
+
+.actions>.deletar{
+    flex-direction: row;
+    background-color: var(--c05);
+    color: var(--c02);
+    padding: 3px 10px;
+}
+
+.action{
+    display: flex;
+    justify-content: center;
+    border: none;
+    margin: 10px;   
+    gap: 20px;
+}
+
+.botoes{
+    display:flex;
+    justify-content: center; 
+    align-content:center; 
+    gap: 15px;
+}
+
+.botao-cadastrar{
+    background-color: var(--c07);
+    color: var(--c02);
+    padding: 10px;
+    border-radius: 10px;    
+    font-size: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+table{
+    width: 100%;
+}
+
+.cabecalho-table{
+    color: var(--c02)
+}
+
+
+tr:nth-child(odd){
+    background-color: var(--c01);
+    color: var(--c02);
+}
+
+.cabecalho{
+    background-color: var(--c01);
+}
+
+.pesquisar{
+    font-size: 1.5rem;
+    background-color: var(--c01);
+    color: var(--c02);
+    border: none;
+    border-radius: 10px;
+}
+
+.barra-pesquisa{
+    border-radius: 10px;
+}
+
