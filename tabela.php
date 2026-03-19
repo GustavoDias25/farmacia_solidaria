@@ -4,7 +4,7 @@ require_once 'connection.php';
 
 $remedios = read($pdo);
 
-foreach ($remedios as &$med) {
+foreach ($remedios as $med) {
    if (new DateTime($med['validade']) < new DateTime()) {
     deletar($pdo, $med['id']);
 }
