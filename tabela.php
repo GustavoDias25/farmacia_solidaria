@@ -1,16 +1,20 @@
-<?php 
+<?php
 require_once 'functions.php';
 require_once 'connection.php';
 
-$remedios = read($pdo);
+$name = trim($_GET['pesquisar'] ?? '');
+
+if ($name !== '') {
+    $remedios = searchByName($pdo, $name);
+} else {
+    $remedios = read($pdo);
+}
 
 foreach ($remedios as $med) {
-   if (new DateTime($med['validade']) < new DateTime()) {
-    deletar($pdo, $med['id']);
+    if (new DateTime($med['validade']) < new DateTime()) {
+        deletar($pdo, $med['id']);
+    }
 }
-
-}
-
 ?>
 
 <table  cellspacing="0" cellpadding="0">
