@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,15 +18,13 @@
                     <h2>Itens</h2>
                 </div>
                 <div class="col-md-6">
-                    <div class="input-group h2">
-                        <input name="data[search]" class="form-control barra-pesquisa" id="search" type="text" placeholder="Pesquisar Itens" >
-                        <button class="bnt btn-primary pesquisar" type="submit">
-                            <i class="bi bi-search" >Pesquisar</i>
-                        </button>
-                    </div>
+                    <form class="input-group h2" method="get">
+                        <input name="pesquisar" class="form-control barra-pesquisa" id="search" type="text" placeholder="Pesquisar Itens" value="<?= htmlspecialchars($_GET['pesquisar'] ?? '') ?>">
+                        <button class="bnt btn-primary pesquisar" type="submit">Pesquisar</button>
+                    </form>
                 </div>
                 <div class="col-md-3 botoes">
-                    <a href="" class="bnt btn-primary botao-cadastrar float-end" >Gerar Lista</a>
+                    <a href="gerarLista.php" class="bnt btn-primary botao-cadastrar float-end" >Gerar Lista</a>
                     <a href="add.php" class="bnt btn-primary botao-cadastrar float-end" >Cadastrar</a>
                 </div>
             </div>  <!-- /#top -->
