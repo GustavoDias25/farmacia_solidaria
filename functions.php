@@ -61,3 +61,11 @@ function deletar($pdo, $id){
     $stmt->execute();
 
 }
+
+function searchByName($pdo, $nome) {
+    $sql = "SELECT * FROM remedios WHERE nome LIKE :nome";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindValue(':nome', "%$nome%");
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}   
